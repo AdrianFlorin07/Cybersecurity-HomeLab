@@ -11,7 +11,7 @@ A hands-on cybersecurity home lab built to simulate real-world attack and defens
 
 ## 🖧 Network Architecture
 
-> *Diagram coming soon*
+> ![Nmap Scan](images/nmap-scan.png)
 
 | Machine | OS | IP Address | Role |
 |---|---|---|---|
