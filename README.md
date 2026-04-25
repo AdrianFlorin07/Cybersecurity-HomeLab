@@ -11,7 +11,7 @@ A hands-on cybersecurity home lab built to simulate real-world attack and defens
 
 ## 🖧 Network Architecture
 
-> ![Network Diagram](diagram.png)
+> ![Network Diagram](images/diagram.png)
 
 | Machine | OS | IP Address | Role |
 |---|---|---|---|
