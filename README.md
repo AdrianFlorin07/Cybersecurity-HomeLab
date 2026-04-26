@@ -31,7 +31,7 @@ All VMs are connected via a **Host-Only network** (isolated from the internet) i
 
 | Nmap Scan | Wireshark Capture |
 |---|---|
-| ![Nmap1](CyberSecurity-HomeLab/Images/Nmap1.png) | ![PCAP](CyberSecurity-HomeLab/Images/PCAP1.png) |
+| ![Nmap1](CyberSecurity-HomeLab/Images/Nmap1.png) | ![PCAP](CyberSecurity-HomeLab/Images/PCAP1.png) 
 | ![Nmap2](CyberSecurity-HomeLab/Images/Nmap2.png) | |
 | ![Nmap3](CyberSecurity-HomeLab/Images/Nmap3.png) | |
 
