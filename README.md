@@ -1,17 +1,18 @@
-#  Cybersecurity HomeLab
+# Cybersecurity HomeLab
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white)
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
+![Snort](https://img.shields.io/badge/Snort-CC0000?style=for-the-badge&logo=snort&logoColor=white)
 
 A hands-on cybersecurity home lab built to simulate real-world attack and defense scenarios using virtualized environments.
 
 ---
 
-## 🖧 Network Architecture
+## Network Architecture
 
-> ![Network Diagram](CyberSecurity-HomeLab/Images/Diagram.png)
+![Network Diagram](CyberSecurity-HomeLab/Images/Diagram.png)
 
 | Machine | OS | IP Address | Role |
 |---|---|---|---|
@@ -23,27 +24,43 @@ All VMs are connected via a **Host-Only network** (isolated from the internet) i
 
 ---
 
-## Completed Tasks
-
 ### Network Reconnaissance
 - Configured isolated lab network with 3 virtual machines
 - Performed full Nmap scan with OS detection and service versioning
 - Captured and analyzed network traffic with Wireshark (ICMP, ARP, TCP)
 
-### Vulnerability Assessment & Exploitation
-- Identified 20+ open ports and critical services on Metasploitable 2
-- Exploited **CVE-2007-2447** (Samba usermap_script) using Metasploit
-- Obtained **root shell** on target system
-- Accessed `/etc/passwd` and `/etc/shadow` — full system compromise demonstrated
-
-### Network Defense *(in progress)*
-- Firewall configuration with iptables
-- Intrusion Detection System with Snort/Suricata
-- Attack simulation and alert verification
+| Nmap Scan | Wireshark Capture |
+|---|---|
+| ![Nmap1](CyberSecurity-HomeLab/Images/Nmap1.png) | ![PCAP](CyberSecurity-HomeLab/Images/PCAP1.png) |
+| ![Nmap2](CyberSecurity-HomeLab/Images/Nmap2.png) | |
+| ![Nmap3](CyberSecurity-HomeLab/Images/Nmap3.png) | |
 
 ---
 
-##  Key Findings
+### Vulnerability Assessment & Exploitation
+- Identified 23 open ports and critical services on Metasploitable 2
+- Exploited **CVE-2007-2447** (Samba usermap_script) using Metasploit Framework
+- Obtained **root shell** on target system
+- Accessed `/etc/passwd` and `/etc/shadow` — full system compromise demonstrated
+
+| Metasploit Exploit | Root Shell + /etc/shadow |
+|---|---|
+| ![meta1](CyberSecurity-HomeLab/Images/meta1.png) | ![meta2](CyberSecurity-HomeLab/Images/meta2.png) |
+
+---
+
+### Network Defense
+- Deployed **Snort IDS 3.12** with custom ICMP detection rules
+- Simulated attack detected in real time — **11 alerts** on 14 analyzed packets
+- Configured iptables firewall rules on Ubuntu Server
+
+| Snort Alerts | Snort Statistics |
+|---|---|
+| ![snort1](CyberSecurity-HomeLab/Images/snort1.png) | ![snort2](CyberSecurity-HomeLab/Images/snort2.png) |
+
+---
+
+## Key Findings
 
 | CVE | Service | Severity | Impact |
 |---|---|---|---|
@@ -55,24 +72,30 @@ All VMs are connected via a **Host-Only network** (isolated from the internet) i
 
 ---
 
-##  Tools Used
+## Tools Used
 
-- **Nmap** — Network scanning and service enumeration
-- **Wireshark** — Packet capture and traffic analysis  
-- **Metasploit Framework** — Exploitation
-- **VirtualBox** — Virtualization platform
+| Tool | Purpose |
+|---|---|
+| **Nmap** | Network scanning and service enumeration |
+| **Wireshark** | Packet capture and traffic analysis |
+| **Metasploit Framework** | Exploitation |
+| **Snort IDS 3.12** | Intrusion detection |
+| **VirtualBox** | Virtualization platform |
 
 ---
 
 ## Repository Structure
+
 Cybersecurity-HomeLab/
 ├── README.md
-├── images/              # Screenshots and diagrams
-├── reports/
-│   ├── nmap-report.md   # Full Nmap findings
-│   └── pentest-report.md # Penetration test report
-└── configs/
-└── network-setup.md  # Lab setup guide
+├── CyberSecurity-HomeLab/
+│   ├── Images/          # Screenshots and diagrams
+│   ├── Reports/
+│   │   ├── nmap-report.md
+│   │   └── pentest-report.md
+│   └── Configs/
+│       └── network-setup.md
+
 
 ---
 
@@ -83,4 +106,3 @@ This lab is built exclusively for **educational purposes** in an isolated virtua
 ---
 
 **Author:** AdrianFlorin07 | [GitHub](https://github.com/AdrianFlorin07)
-
